@@ -46,3 +46,20 @@ This project implements the Raft consensus algorithm to maintain a consistent re
 ```bash
 git clone https://github.com/yourusername/raft-project.git
 cd raft-project
+## How to Run
+
+### Prerequisites
+- Go installed (version 1.18+ recommended)
+
+### Steps
+
+# Run 3 nodes (open 3 separate terminals)
+
+# Terminal 1
+go run main.go --id=1 --port=8001
+
+# Terminal 2
+go run main.go --id=2 --port=8002
+
+# Terminal 3
+go run main.go --id=3 --port=8003

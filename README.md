@@ -26,7 +26,6 @@ This project implements the Raft consensus algorithm to maintain a consistent re
 - Go
 - Goroutines for concurrent node behavior
 - Mutexes for thread-safe state access
-- Channels (if you used them—remove if not)
 
 ## System Design
 - Each server maintains:
@@ -42,19 +41,19 @@ This project implements the Raft consensus algorithm to maintain a consistent re
 
 ## How to Run
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/raft-project.git
-cd raft-project
-## How to Run
-
 ### Prerequisites
 - Go installed (version 1.18+ recommended)
 
 ### Steps
 
-# Run 3 nodes (open 3 separate terminals)
+1. Clone the repository:
+```bash
+git clone https://github.com/aschu06/raft-project.git
+cd raft-project
+```
 
+2. Start 3 nodes, each in its own terminal:
+```bash
 # Terminal 1
 go run main.go --id=1 --port=8001
 
@@ -63,3 +62,4 @@ go run main.go --id=2 --port=8002
 
 # Terminal 3
 go run main.go --id=3 --port=8003
+```

@@ -42,24 +42,23 @@ This project implements the Raft consensus algorithm to maintain a consistent re
 ## How to Run
 
 ### Prerequisites
-- Go installed (version 1.18+ recommended)
+- Go 1.22 or later
 
 ### Steps
 
 1. Clone the repository:
 ```bash
 git clone https://github.com/aschu06/raft-project.git
-cd raft-project
+cd raft-project/raft
 ```
 
-2. Start 3 nodes, each in its own terminal:
+2. Run the test suite with the race detector:
 ```bash
-# Terminal 1
-go run main.go --id=1 --port=8001
+go test -race
+```
 
-# Terminal 2
-go run main.go --id=2 --port=8002
-
-# Terminal 3
-go run main.go --id=3 --port=8003
+To run only leader election (3A) or log replication (3B) tests:
+```bash
+go test -race -run 3A
+go test -race -run 3B
 ```
